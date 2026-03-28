@@ -1,13 +1,15 @@
 import React from 'react';
 import Game from './pages/Game';
+import { Toaster } from "./components/ui/toaster";
 import './index.css';
 
-// Rimuoviamo tutti i "lucchetti" (AuthProvider, QueryClient, ecc.)
 function App() {
+  // Mostriamo direttamente il gioco. 
+  // Avvolgiamo tutto in un div con classe "dark" per attivare i tuoi colori CSS.
   return (
-    // La classe "dark" serve per attivare i colori che hai nel CSS
-    <div className="dark min-h-screen bg-background text-foreground">
+    <div className="dark bg-background min-h-screen">
       <Game />
+      <Toaster />
     </div>
   );
 }
